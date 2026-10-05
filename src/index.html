@@ -151,7 +151,7 @@
 
         <main>
             <!-- 01 — HERO SECTION -->
-            <section class="relative min-h-[92vh] sm:min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-24 bg-[#050505]">
+            <section class="relative min-h-[110vh] sm:min-h-screen flex flex-col justify-start items-center overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-28 bg-[#050505]">
                 <!-- Living Madder Dusk Sky WebGL Background (FeralUI) -->
                 <div id="hero-sky-container" class="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden"
                      style="background: linear-gradient(180deg, #FFE3C7, #F2B8A0, #C77E9E, #7A5E9E);">
@@ -163,70 +163,73 @@
                 </div>
 
                 <!-- Hero Content Container -->
-                <div class="container mx-auto px-4 sm:px-6 relative z-20 text-center flex flex-col items-center justify-center">
+                <div class="container mx-auto px-4 sm:px-6 relative z-20 text-center flex flex-col items-center justify-center my-auto">
                     <div class="max-w-4xl mx-auto flex flex-col items-center">
                         
-                        <!-- Brand Collaboration Headings in Instrument Serif -->
+                        <!-- Brand Collaboration Headings in Instrument Serif (Matching PC structure) -->
                         <div class="reveal mb-6 sm:mb-8" style="transition-delay: 100ms;">
-                            <h1 class="font-instrument tracking-tight leading-[0.98] text-center select-none">
-                                <span class="block text-[28px] xs:text-[34px] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl uppercase font-normal text-white">
+                            <h1 class="font-instrument tracking-tight leading-[0.9] text-center select-none">
+                                <span class="block text-5xl sm:text-7xl md:text-8xl lg:text-9xl uppercase font-normal text-white">
                                     <span class="text-[#de0202] drop-shadow-[0_4px_35px_rgba(222,2,2,0.5)]">POWERHOUSE</span>
-                                    <span class="text-white/40 italic font-light mx-1 sm:mx-3">×</span>
-                                    <span class="text-white drop-shadow-[0_4px_35px_rgba(255,255,255,0.25)]">OS CODE</span>
+                                    <span class="text-white/40 italic font-light mx-2 sm:mx-4">×</span>
+                                    <span class="text-white drop-shadow-[0_4px_35px_rgba(255,255,255,0.25)]">OS</span>
                                 </span>
-                                <span class="block text-2xl sm:text-4xl md:text-5xl lg:text-6xl italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-white via-rose-100 to-white/70 mt-2 sm:mt-4 tracking-normal">
+                                <span class="block text-5xl sm:text-7xl md:text-8xl lg:text-9xl uppercase font-normal text-white mt-1 sm:mt-2">
+                                    CODE
+                                </span>
+                                <span class="block text-3xl sm:text-5xl md:text-6xl lg:text-7xl italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-white via-rose-100 to-white/70 mt-3 sm:mt-5 tracking-normal">
                                     Core Team Recruitment
                                 </span>
                             </h1>
                             <div class="flex items-center justify-center gap-3 mt-4 sm:mt-6">
                                 <span class="text-[11px] sm:text-xs uppercase font-mono tracking-widest text-white/60">Official Student Chapter Launch</span>
-                                <img src="/new.png" alt="OS Code" class="h-5 sm:h-7 w-auto object-contain opacity-90 drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]">
+                                <img src="/new.png" alt="OS Code" class="h-6 sm:h-7 w-auto object-contain opacity-90 drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]">
                             </div>
                         </div>
 
                         <!-- Hero Description -->
-                        <div class="reveal mb-8 sm:mb-10" style="transition-delay: 200ms;">
-                            <p class="text-sm sm:text-base md:text-lg text-gray-200/90 max-w-2xl mx-auto font-light tracking-wide leading-relaxed px-2 text-center drop-shadow-sm">
+                        <div class="reveal mb-8 sm:mb-10 max-w-2xl mx-auto px-2" style="transition-delay: 200ms;">
+                            <p class="text-sm sm:text-base md:text-lg text-gray-200/90 font-light tracking-wide leading-relaxed text-center drop-shadow-sm">
                                 We are scouting proactive builders, creative storytellers, strategists, and organizers ready to take real ownership, work with industry mentors, and lead the OS Code chapter.
                             </p>
                         </div>
 
-                        <!-- Hero CTAs -->
-                        <div class="reveal flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 w-full sm:w-auto mb-10 sm:mb-14" style="transition-delay: 300ms;">
+                        <!-- Hero CTAs (Revealed on Scroll) -->
+                        <div class="reveal flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 w-full sm:w-auto mt-12 sm:mt-16 mb-10 sm:mb-14" style="transition-delay: 300ms;">
                             <a href="#apply"
-                                class="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 sm:px-8 sm:py-4 rounded-full bg-[#de0202] text-white font-semibold text-xs sm:text-sm hover:bg-[#b80202] hover:shadow-[0_0_35px_rgba(222,2,2,0.6)] hover:scale-105 transition-all duration-300 shadow-2xl group uppercase tracking-widest font-mono border border-red-500/40">
+                                class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-[#de0202] text-white font-semibold text-xs sm:text-sm hover:bg-[#b80202] hover:shadow-[0_0_35px_rgba(222,2,2,0.6)] hover:scale-105 transition-all duration-300 shadow-2xl group uppercase tracking-widest font-mono border border-red-500/40">
                                 <span>APPLY FOR CORE TEAM</span>
                                 <iconify-icon icon="lucide:arrow-right" class="ml-2 group-hover:translate-x-1.5 transition-transform text-base"></iconify-icon>
                             </a>
                             <a href="#roles"
-                                class="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 sm:px-8 sm:py-4 rounded-full bg-black/45 backdrop-blur-md border border-white/20 text-white font-medium text-xs sm:text-sm hover:bg-white/10 hover:border-white/40 hover:scale-105 transition-all duration-300 uppercase tracking-widest font-mono">
+                                class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-black/45 backdrop-blur-md border border-white/20 text-white font-medium text-xs sm:text-sm hover:bg-white/10 hover:border-white/40 hover:scale-105 transition-all duration-300 uppercase tracking-widest font-mono">
                                 <span>EXPLORE 4 ROLES</span>
                                 <iconify-icon icon="lucide:arrow-down" class="ml-2 text-base"></iconify-icon>
                             </a>
                         </div>
 
                         <!-- 4 Core Domains Micro-Pillars -->
-                        <div class="reveal grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto w-full mb-6" style="transition-delay: 400ms;">
-                            <div class="px-4 py-3 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 text-left">
+                        <div class="reveal grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto w-full mb-8" style="transition-delay: 400ms;">
+                            <div class="px-4 py-3 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 text-left shadow-lg">
                                 <div class="text-[10px] font-mono uppercase tracking-wider text-[#de0202]">01 / Tech</div>
                                 <div class="text-xs sm:text-sm font-medium text-white mt-0.5">Development & AI</div>
                             </div>
-                            <div class="px-4 py-3 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 text-left">
+                            <div class="px-4 py-3 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 text-left shadow-lg">
                                 <div class="text-[10px] font-mono uppercase tracking-wider text-[#de0202]">02 / Media</div>
                                 <div class="text-xs sm:text-sm font-medium text-white mt-0.5">Content & Visuals</div>
                             </div>
-                            <div class="px-4 py-3 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 text-left">
+                            <div class="px-4 py-3 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 text-left shadow-lg">
                                 <div class="text-[10px] font-mono uppercase tracking-wider text-[#de0202]">03 / Growth</div>
                                 <div class="text-xs sm:text-sm font-medium text-white mt-0.5">Marketing & PR</div>
                             </div>
-                            <div class="px-4 py-3 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 text-left">
+                            <div class="px-4 py-3 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 text-left shadow-lg">
                                 <div class="text-[10px] font-mono uppercase tracking-wider text-[#de0202]">04 / Events</div>
                                 <div class="text-xs sm:text-sm font-medium text-white mt-0.5">Operations & Lead</div>
                             </div>
                         </div>
 
                         <!-- Bengaluru Live Time -->
-                        <div class="reveal flex items-center justify-center gap-3 text-[11px] text-white/50 font-mono uppercase tracking-widest" style="transition-delay: 500ms;">
+                        <div class="reveal flex items-center justify-center gap-3 text-[11px] text-white/50 font-mono uppercase tracking-widest pb-4" style="transition-delay: 500ms;">
                             <span>Bengaluru, KA</span>
                             <span class="w-1 h-1 rounded-full bg-white/30"></span>
                             <span id="current-time">--:-- --</span>
