@@ -58,4 +58,13 @@ function copyRecursiveSync(src, dest) {
 
 copyRecursiveSync(srcDir, distDir);
 
+// 4. Also provide /os-code/ alias in dist for bookmark compatibility
+const osCodeDistDir = path.join(distDir, 'os-code');
+if (!fs.existsSync(osCodeDistDir)) {
+    fs.mkdirSync(osCodeDistDir, { recursive: true });
+}
+if (fs.existsSync(path.join(distDir, 'index.html'))) {
+    fs.copyFileSync(path.join(distDir, 'index.html'), path.join(osCodeDistDir, 'index.html'));
+}
+
 console.log('Build successful! All assets and injected HTML files copied to dist/ directory.');
