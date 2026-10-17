@@ -22,13 +22,15 @@ body {
 /* Reveal Animation Styles */
 .reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    transform: translateY(20px);
+    transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
 }
 
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
+    will-change: auto;
 }
 
 /* Custom Floating Animations */
@@ -56,9 +58,20 @@ body {
     inset: 0;
     z-index: 50;
     pointer-events: none;
-    opacity: 0.05;
-    mix-blend-mode: overlay;
+    opacity: 0.03;
     background-image: url("noise.svg");
+}
+
+@media (max-width: 768px) {
+    .noise-overlay {
+        display: none;
+    }
+}
+
+/* Off-screen Content Visibility Optimization for fast mobile scrolling */
+.cv-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 700px;
 }
 
 /* Parallax Container Effect */

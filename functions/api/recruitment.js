@@ -36,7 +36,7 @@ export async function onRequestPost(context) {
         });
     }
 
-    const { first_name, last_name, usn, role, github_profile, motivation, botcheck } = body;
+    const { first_name, last_name, department, other_department, semester, usn, role, github_profile, motivation, botcheck } = body;
 
     // Honeypot bot protection
     if (botcheck) {
@@ -47,12 +47,22 @@ export async function onRequestPost(context) {
     }
 
     // Validate required fields
-    if (!first_name || !last_name || !usn || !role || !motivation) {
+    if (!first_name || !last_name || !department || !semester || !usn || !role || !motivation) {
         return new Response(JSON.stringify({ error: 'Missing required application fields.' }), {
             status: 400,
             headers: { 'Content-Type': 'application/json', ...corsHeaders },
         });
     }
+
+    // If 'Others' was selected, ensure specific department was provided
+    if (department === 'Others' && !other_department) {
+        return new Response(JSON.stringify({ error: 'Please specify your department.' }), {
+            status: 400,
+            headers: { 'Content-Type': 'application/json', ...corsHeaders },
+        });
+    }
+
+    const resolvedDepartment = department === 'Others' ? other_department : department;
 
     // Enforce reasonable length limits
     if (first_name.length > 80 || last_name.length > 80 || usn.length > 30 || motivation.length > 2500) {
@@ -66,16 +76,17 @@ export async function onRequestPost(context) {
 
     const web3Payload = {
         access_key: accessKey,
-        subject: `[OS Code Recruitment] Application: ${first_name} ${last_name} (${role})`,
+        subject: `[OS Code Recruitment] Application: ${first_name} ${last_name} (${resolvedDepartment} - ${semester} - ${role})`,
         from_name: 'PowerHouse × OS Code Recruitment Portal',
         first_name,
         last_name,
         usn: usn.toUpperCase(),
+        department: resolvedDepartment,
+        semester,
         role,
         github_profile: github_profile || 'None provided',
         motivation,
         college: 'East Point College of Engineering and Technology',
-        department: 'Department of IoT and Cybersecurity',
         submission_time: new Date().toISOString()
     };
 

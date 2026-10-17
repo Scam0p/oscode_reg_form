@@ -111,8 +111,11 @@
                         POWERHOUSE
                     </span>
                     <span class="text-white/40 font-mono text-xs sm:text-base select-none">×</span>
-                    <img src="/new.png" alt="OS Code"
-                        class="h-6 sm:h-9 md:h-10 w-auto object-contain group-hover:scale-105 transition-transform duration-300 select-none">
+                    <picture>
+                        <source srcset="/new.webp" type="image/webp">
+                        <img src="/new.png" alt="OS Code" width="120" height="40" fetchpriority="high" decoding="async"
+                            class="h-6 sm:h-9 md:h-10 w-auto object-contain group-hover:scale-105 transition-transform duration-300 select-none">
+                    </picture>
                 </a>
 
                 <!-- Desktop Navigation Links -->
@@ -183,7 +186,7 @@
                     style="background: linear-gradient(180deg, #FFE3C7, #F2B8A0, #C77E9E, #7A5E9E);">
                     <canvas id="sky-canvas" class="absolute inset-0 w-full h-full block" role="img"
                         aria-label="Madder dusk live sky gradient"></canvas>
-                    <div id="sky-grain" class="absolute inset-0 pointer-events-none opacity-20 mix-blend-overlay"></div>
+                    <div id="sky-grain" class="absolute inset-0 pointer-events-none opacity-10"></div>
                     <!-- Atmospheric Lighting & Bottom Transition -->
                     <div class="absolute inset-0 bg-gradient-to-b from-[#050505]/75 via-[#050505]/35 to-[#050505] z-10">
                     </div>
@@ -263,12 +266,15 @@
                             <span class="text-[11px] sm:text-xs uppercase font-mono tracking-widest text-gray-300/80">
                                 Official Student Chapter Launch
                             </span>
-                            <img src="/new.png" alt="OS Code"
-                                class="h-6 sm:h-7 w-auto object-contain opacity-90 drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]">
+                            <picture>
+                                <source srcset="/new.webp" type="image/webp">
+                                <img src="/new.png" alt="OS Code" width="84" height="28" decoding="async"
+                                    class="h-6 sm:h-7 w-auto object-contain opacity-90 drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]">
+                            </picture>
                         </div>
 
                         <!-- Hero CTAs (Revealed on Scroll) -->
-                        <div class="reveal flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 w-full sm:w-auto mb-10 sm:mb-14"
+                        <div class="reveal flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 w-full sm:w-auto"
                             style="transition-delay: 200ms;">
                             <a href="#apply"
                                 class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-[#de0202] text-white font-semibold text-xs sm:text-sm hover:bg-[#b80202] hover:shadow-[0_0_35px_rgba(222,2,2,0.6)] hover:scale-105 transition-all duration-300 shadow-2xl group uppercase tracking-widest font-mono border border-red-500/40">
@@ -283,41 +289,12 @@
                             </a>
                         </div>
 
-                        <!-- 4 Core Domains Micro-Pillars -->
-                        <div class="reveal grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto w-full mb-4"
-                            style="transition-delay: 300ms;">
-                            <a href="#role-tech"
-                                class="px-4 py-3 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 text-left shadow-lg hover:border-red-500/40 transition-colors block">
-                                <div class="text-[10px] font-mono uppercase tracking-wider text-[#de0202]">01 / Tech
-                                </div>
-                                <div class="text-xs sm:text-sm font-medium text-white mt-0.5">Development & AI</div>
-                            </a>
-                            <a href="#role-media"
-                                class="px-4 py-3 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 text-left shadow-lg hover:border-red-500/40 transition-colors block">
-                                <div class="text-[10px] font-mono uppercase tracking-wider text-[#de0202]">02 / Media
-                                </div>
-                                <div class="text-xs sm:text-sm font-medium text-white mt-0.5">Content & Visuals</div>
-                            </a>
-                            <a href="#role-growth"
-                                class="px-4 py-3 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 text-left shadow-lg hover:border-red-500/40 transition-colors block">
-                                <div class="text-[10px] font-mono uppercase tracking-wider text-[#de0202]">03 / Growth
-                                </div>
-                                <div class="text-xs sm:text-sm font-medium text-white mt-0.5">Marketing & PR</div>
-                            </a>
-                            <a href="#role-events"
-                                class="px-4 py-3 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 text-left shadow-lg hover:border-red-500/40 transition-colors block">
-                                <div class="text-[10px] font-mono uppercase tracking-wider text-[#de0202]">04 / Events
-                                </div>
-                                <div class="text-xs sm:text-sm font-medium text-white mt-0.5">Operations & Lead</div>
-                            </a>
-                        </div>
-
                     </div>
                 </div>
             </section>
 
             <!-- 02 — WHAT YOU'RE SIGNING UP FOR -->
-            <section id="about-mission" class="py-28 relative border-t border-white/5 bg-[#080808]">
+            <section id="about-mission" class="cv-auto py-28 relative border-t border-white/5 bg-[#080808]">
                 <div class="container mx-auto px-6">
                     <div class="max-w-4xl mx-auto text-center reveal mb-20">
                         <span class="text-xs uppercase font-mono tracking-widest text-[#FF4500] mb-3 inline-block">
@@ -402,7 +379,7 @@
             </section>
 
             <!-- 03 — AVAILABLE TEAMS -->
-            <section id="roles" class="py-32 relative border-t border-white/5 bg-[#050505]">
+            <section id="roles" class="cv-auto py-32 relative border-t border-white/5 bg-[#050505]">
                 <div class="container mx-auto px-6">
                     <div class="max-w-4xl mx-auto text-center reveal mb-20">
                         <span class="text-xs uppercase font-mono tracking-widest text-[#FF4500] mb-3 inline-block">
@@ -610,7 +587,7 @@
             </section>
 
             <!-- 04 — CORE MEMBER EXPECTATIONS -->
-            <section id="expectations" class="py-28 relative border-t border-white/5 bg-[#080808]">
+            <section id="expectations" class="cv-auto py-28 relative border-t border-white/5 bg-[#080808]">
                 <div class="container mx-auto px-6 max-w-5xl">
                     <div class="reveal mb-16 text-center">
                         <span class="text-xs uppercase font-mono tracking-widest text-[#FF4500] mb-3 inline-block">
@@ -685,7 +662,7 @@
             </section>
 
             <!-- 05 — APPLICATION FORM SECTION -->
-            <section id="apply" class="py-32 relative border-t border-white/5 bg-[#050505]">
+            <section id="apply" class="cv-auto py-32 relative border-t border-white/5 bg-[#050505]">
                 <div class="container mx-auto px-6">
                     <div class="max-w-4xl mx-auto">
 
@@ -750,6 +727,79 @@
                                             last name.
                                         </span>
                                     </div>
+                                </div>
+
+                                <!-- Academic Details (Department & Semester) -->
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
+                                    <!-- Department Dropdown -->
+                                    <div>
+                                        <label for="department-select"
+                                            class="block text-xs uppercase font-mono tracking-widest text-gray-400 mb-2">
+                                            Department <span class="text-[#FF4500]">*</span>
+                                        </label>
+                                        <div class="relative">
+                                            <select id="department-select" name="department" required
+                                                class="form-input-field w-full bg-[#050505] border border-white/10 rounded-xl sm:rounded-2xl px-4 py-3.5 sm:px-5 sm:py-4 text-white focus:outline-none transition-all appearance-none cursor-pointer text-base sm:text-sm">
+                                                <option value="" disabled selected class="text-gray-600">Select your department...</option>
+                                                <option value="CSE">CSE</option>
+                                                <option value="AIML">AIML</option>
+                                                <option value="AIDS">AIDS</option>
+                                                <option value="ECE">ECE</option>
+                                                <option value="ISE">ISE</option>
+                                                <option value="IOT">IOT</option>
+                                                <option value="Others">Others</option>
+                                            </select>
+                                            <div
+                                                class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
+                                                <iconify-icon icon="lucide:chevron-down" class="text-lg"></iconify-icon>
+                                            </div>
+                                        </div>
+                                        <span id="err-department"
+                                            class="text-xs text-[#de0202] font-mono mt-1.5 hidden flex items-center gap-1">
+                                            <iconify-icon icon="lucide:alert-circle"></iconify-icon> Please select your department.
+                                        </span>
+                                    </div>
+
+                                    <!-- Semester Dropdown -->
+                                    <div>
+                                        <label for="semester-select"
+                                            class="block text-xs uppercase font-mono tracking-widest text-gray-400 mb-2">
+                                            Select your sem <span class="text-[#FF4500]">*</span>
+                                        </label>
+                                        <div class="relative">
+                                            <select id="semester-select" name="semester" required
+                                                class="form-input-field w-full bg-[#050505] border border-white/10 rounded-xl sm:rounded-2xl px-4 py-3.5 sm:px-5 sm:py-4 text-white focus:outline-none transition-all appearance-none cursor-pointer text-base sm:text-sm">
+                                                <option value="" disabled selected class="text-gray-600">Select your sem...</option>
+                                                <option value="1st Sem">1st Sem</option>
+                                                <option value="3rd Sem">3rd Sem</option>
+                                                <option value="5th Sem">5th Sem</option>
+                                                <option value="7th Sem">7th Sem</option>
+                                            </select>
+                                            <div
+                                                class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
+                                                <iconify-icon icon="lucide:chevron-down" class="text-lg"></iconify-icon>
+                                            </div>
+                                        </div>
+                                        <span id="err-semester"
+                                            class="text-xs text-[#de0202] font-mono mt-1.5 hidden flex items-center gap-1">
+                                            <iconify-icon icon="lucide:alert-circle"></iconify-icon> Please select your semester.
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!-- Dynamic Other Department Specification Field -->
+                                <div id="other-department-container" class="hidden">
+                                    <label for="other-department"
+                                        class="block text-xs uppercase font-mono tracking-widest text-gray-400 mb-2">
+                                        Specify your department <span class="text-[#FF4500]">*</span>
+                                    </label>
+                                    <input type="text" id="other-department" name="other_department"
+                                        placeholder="Specify your department"
+                                        class="form-input-field w-full bg-[#050505] border border-white/10 rounded-xl sm:rounded-2xl px-4 py-3.5 sm:px-5 sm:py-4 text-white placeholder-gray-600 transition-all text-base sm:text-sm">
+                                    <span id="err-other-department"
+                                        class="text-xs text-[#de0202] font-mono mt-1.5 hidden flex items-center gap-1">
+                                        <iconify-icon icon="lucide:alert-circle"></iconify-icon> Please specify your department.
+                                    </span>
                                 </div>
 
                                 <!-- USN Field -->
@@ -900,6 +950,7 @@
                                     class="pt-4 border-t border-white/10 w-full max-w-sm text-xs font-mono text-gray-500 flex flex-col gap-1.5">
                                     <p>Applicant: <span id="summary-name" class="text-white"></span></p>
                                     <p>USN: <span id="summary-usn" class="text-white"></span></p>
+                                    <p>Department: <span id="summary-dept" class="text-white"></span> (<span id="summary-sem" class="text-white"></span>)</p>
                                     <p>Target Team: <span id="summary-role" class="text-[#FF4500]"></span></p>
                                 </div>
                                 <button onclick="resetApplicationForm()"
@@ -916,7 +967,7 @@
         </main>
 
         <!-- 06 — FOOTER -->
-        <footer class="py-20 border-t border-white/5 bg-[#050505] relative overflow-hidden">
+        <footer class="cv-auto py-20 border-t border-white/5 bg-[#050505] relative overflow-hidden">
             <div class="container mx-auto px-6 relative z-10">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
 
@@ -929,7 +980,10 @@
                         <div class="flex items-center gap-3">
                             <span class="text-xs font-mono tracking-widest uppercase text-white/50">In Collaboration
                                 with</span>
-                            <img src="/new.png" alt="OS Code" class="h-7 w-auto object-contain select-none">
+                            <picture>
+                                <source srcset="/new.webp" type="image/webp">
+                                <img src="/new.png" alt="OS Code" width="84" height="28" loading="lazy" decoding="async" class="h-7 w-auto object-contain select-none">
+                            </picture>
                         </div>
                         <div class="text-xs text-gray-500 mt-2 font-light">
                             East Point College of Engineering and Technology · Dept of IoT & Cybersecurity
@@ -1181,11 +1235,15 @@ void main(){
             let visible = true;
             let animId = 0;
 
+            const isMobile = window.innerWidth < 768 || (navigator.maxTouchPoints > 0 && window.innerWidth < 1024);
+
             function resize() {
                 const rect = canvas.getBoundingClientRect();
-                const dpr = Math.min(2, window.devicePixelRatio || 1);
-                const w = Math.max(1, Math.round(rect.width * dpr));
-                const h = Math.max(1, Math.round(rect.height * dpr));
+                const dpr = isMobile ? 0.5 : Math.min(1.25, window.devicePixelRatio || 1);
+                const maxDimW = isMobile ? 360 : 1200;
+                const maxDimH = isMobile ? 640 : 1200;
+                const w = Math.min(maxDimW, Math.max(1, Math.round(rect.width * dpr)));
+                const h = Math.min(maxDimH, Math.max(1, Math.round(rect.height * dpr)));
                 if (canvas.width !== w || canvas.height !== h) {
                     canvas.width = w;
                     canvas.height = h;
@@ -1202,11 +1260,20 @@ void main(){
                 gl.drawArrays(gl.TRIANGLES, 0, 3);
             }
 
+            let lastFrameTime = 0;
+            const frameInterval = isMobile ? 33 : 16; // 30 FPS cap on mobile for cool GPU and 60/120fps touch scroll
+
             function tick(now) {
-                if (!visible || document.hidden) {
+                if (!visible || document.hidden || window.scrollY > window.innerHeight) {
                     last = 0;
+                    animId = 0;
                     return;
                 }
+                if (isMobile && (now - lastFrameTime < frameInterval)) {
+                    animId = requestAnimationFrame(tick);
+                    return;
+                }
+                lastFrameTime = now;
                 if (last) {
                     t += Math.min(0.05, (now - last) / 1000) * (speed / 100) * FLOW_SPEED_RATE;
                 }
@@ -1216,7 +1283,7 @@ void main(){
             }
 
             function start() {
-                if (!animId) {
+                if (!animId && visible && !document.hidden && window.scrollY <= window.innerHeight) {
                     last = 0;
                     animId = requestAnimationFrame(tick);
                 }
@@ -1230,12 +1297,12 @@ void main(){
             }
 
             resize();
-            window.addEventListener('resize', resize);
+            window.addEventListener('resize', resize, { passive: true });
 
             if ('IntersectionObserver' in window) {
                 const observer = new IntersectionObserver(([entry]) => {
                     visible = entry.isIntersecting;
-                    if (visible) start();
+                    if (visible && window.scrollY <= window.innerHeight) start();
                     else stop();
                 });
                 observer.observe(canvas);
@@ -1243,23 +1310,41 @@ void main(){
                 start();
             }
 
+            // Pause WebGL rendering on mobile during active touch scrolling so compositor stays 100% fluid
+            let scrollResumeTimer = null;
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > window.innerHeight) {
+                    stop();
+                    return;
+                }
+                if (isMobile) {
+                    stop();
+                    clearTimeout(scrollResumeTimer);
+                    scrollResumeTimer = setTimeout(() => {
+                        if (visible && window.scrollY <= window.innerHeight) {
+                            start();
+                        }
+                    }, 120);
+                }
+            }, { passive: true });
+
             document.addEventListener('visibilitychange', () => {
                 if (document.hidden) stop();
-                else if (visible) start();
+                else if (visible && window.scrollY <= window.innerHeight) start();
             });
 
-            // Grain overlay
+            // Subtle static grain overlay (rendered once on canvas without blend-mode cost)
             const grainDiv = document.getElementById('sky-grain');
             if (grainDiv) {
                 const tile = document.createElement('canvas');
-                tile.width = tile.height = 256;
+                tile.width = tile.height = 128;
                 const ctx = tile.getContext('2d');
                 if (ctx) {
-                    const imgData = ctx.createImageData(256, 256);
+                    const imgData = ctx.createImageData(128, 128);
                     for (let i = 0; i < imgData.data.length; i += 4) {
                         const val = Math.round((Math.random() + Math.random()) * 127.5);
                         imgData.data[i] = imgData.data[i + 1] = imgData.data[i + 2] = val;
-                        imgData.data[i + 3] = 255;
+                        imgData.data[i + 3] = 20;
                     }
                     ctx.putImageData(imgData, 0, 0);
                     grainDiv.style.backgroundImage = 'url(' + tile.toDataURL() + ')';
@@ -1270,16 +1355,21 @@ void main(){
 
         // ─── Header Scroll Blending Transition ───────────────
         const nav = document.getElementById('main-nav');
+        let isNavScrolled = false;
         function updateNavScroll() {
-            if (window.scrollY > 40) {
-                nav.classList.add('py-2', 'backdrop-blur-md', 'bg-[#050505]/90', 'border-b', 'border-white/10');
-                nav.classList.remove('py-4', 'bg-transparent');
-            } else {
-                nav.classList.remove('py-2', 'backdrop-blur-md', 'bg-[#050505]/90', 'border-b', 'border-white/10');
-                nav.classList.add('py-4', 'bg-transparent');
+            const scrolled = window.scrollY > 40;
+            if (scrolled !== isNavScrolled) {
+                isNavScrolled = scrolled;
+                if (isNavScrolled) {
+                    nav.classList.add('py-2', 'backdrop-blur-md', 'bg-[#050505]/95', 'border-b', 'border-white/10');
+                    nav.classList.remove('py-4', 'bg-transparent');
+                } else {
+                    nav.classList.remove('py-2', 'backdrop-blur-md', 'bg-[#050505]/95', 'border-b', 'border-white/10');
+                    nav.classList.add('py-4', 'bg-transparent');
+                }
             }
         }
-        window.addEventListener('scroll', updateNavScroll);
+        window.addEventListener('scroll', updateNavScroll, { passive: true });
         updateNavScroll();
 
         // ─── 1. Intersection Observer for Reveal Animation ───
@@ -1287,11 +1377,12 @@ void main(){
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
                 }
             });
         }, {
-            threshold: 0.04,
-            rootMargin: '0px 0px -15px 0px'
+            threshold: 0.05,
+            rootMargin: '0px 0px 50px 0px'
         });
 
         document.querySelectorAll('.reveal').forEach(el => {
@@ -1299,6 +1390,7 @@ void main(){
             const rect = el.getBoundingClientRect();
             if (rect.top < window.innerHeight && rect.bottom > 0) {
                 el.classList.add('active');
+                revealObserver.unobserve(el);
             }
         });
 
@@ -1398,32 +1490,52 @@ void main(){
         const btnIcon = document.getElementById('btn-icon');
         const errorAlert = document.getElementById('form-error-alert');
         const errorAlertText = document.getElementById('form-error-text');
+        const deptSelect = document.getElementById('department-select');
+        const otherDeptContainer = document.getElementById('other-department-container');
+        const otherDeptInput = document.getElementById('other-department');
 
         // Validation error display helpers
         function setError(inputId, errId, show, msg = '') {
             const input = document.getElementById(inputId);
             const err = document.getElementById(errId);
             if (show) {
-                input.classList.add('input-error');
+                if (input) input.classList.add('input-error');
                 if (err) {
                     if (msg) err.innerHTML = `<iconify-icon icon="lucide:alert-circle"></iconify-icon> ${msg}`;
                     err.classList.remove('hidden');
                 }
             } else {
-                input.classList.remove('input-error');
+                if (input) input.classList.remove('input-error');
                 if (err) err.classList.add('hidden');
             }
         }
 
+        // Handle 'Others' department toggle
+        if (deptSelect && otherDeptContainer) {
+            deptSelect.addEventListener('change', () => {
+                if (deptSelect.value === 'Others') {
+                    otherDeptContainer.classList.remove('hidden');
+                    if (otherDeptInput) otherDeptInput.focus();
+                } else {
+                    otherDeptContainer.classList.add('hidden');
+                    if (otherDeptInput) {
+                        otherDeptInput.value = '';
+                        setError('other-department', 'err-other-department', false);
+                    }
+                }
+            });
+        }
+
         // Live input cleaning on change
-        ['first-name', 'last-name', 'usn', 'role-select', 'github-profile', 'motivation'].forEach(id => {
+        ['first-name', 'last-name', 'department-select', 'other-department', 'semester-select', 'usn', 'role-select', 'github-profile', 'motivation'].forEach(id => {
             const el = document.getElementById(id);
             if (el) {
-                el.addEventListener('input', () => {
+                const eventName = el.tagName === 'SELECT' ? 'change' : 'input';
+                el.addEventListener(eventName, () => {
                     el.classList.remove('input-error');
                     const err = document.getElementById('err-' + id.replace('-select', ''));
                     if (err) err.classList.add('hidden');
-                    errorAlert.classList.add('hidden');
+                    if (errorAlert) errorAlert.classList.add('hidden');
                 });
             }
         });
@@ -1433,10 +1545,14 @@ void main(){
                 e.preventDefault();
 
                 // Clear previous alerts
-                errorAlert.classList.add('hidden');
+                if (errorAlert) errorAlert.classList.add('hidden');
 
                 const firstName = document.getElementById('first-name').value.trim();
                 const lastName = document.getElementById('last-name').value.trim();
+                const department = deptSelect ? deptSelect.value : '';
+                const otherDepartment = otherDeptInput ? otherDeptInput.value.trim() : '';
+                const semesterSelect = document.getElementById('semester-select');
+                const semester = semesterSelect ? semesterSelect.value : '';
                 const usn = document.getElementById('usn').value.trim().toUpperCase();
                 const role = document.getElementById('role-select').value;
                 const github = document.getElementById('github-profile').value.trim();
@@ -1458,6 +1574,32 @@ void main(){
                     isValid = false;
                 } else {
                     setError('last-name', 'err-last-name', false);
+                }
+
+                // Validate Department
+                if (!department) {
+                    setError('department-select', 'err-department', true, 'Please select your department.');
+                    isValid = false;
+                } else {
+                    setError('department-select', 'err-department', false);
+                }
+
+                // Validate Other Department
+                if (department === 'Others') {
+                    if (!otherDepartment) {
+                        setError('other-department', 'err-other-department', true, 'Please specify your department.');
+                        isValid = false;
+                    } else {
+                        setError('other-department', 'err-other-department', false);
+                    }
+                }
+
+                // Validate Semester
+                if (!semester) {
+                    setError('semester-select', 'err-semester', true, 'Please select your semester.');
+                    isValid = false;
+                } else {
+                    setError('semester-select', 'err-semester', false);
                 }
 
                 // Validate USN
@@ -1513,15 +1655,19 @@ void main(){
                 btnIcon.setAttribute('icon', 'line-md:loading-twotone-loop');
 
                 // Prepare Payload for Web3Forms
-                // Update dynamic subject
-                document.getElementById('form-subject').value = `[OS Code Recruitment] Application: ${firstName} ${lastName} (${role})`;
+                const finalDept = department === 'Others' ? otherDepartment : department;
+                document.getElementById('form-subject').value = `[OS Code Recruitment] Application: ${firstName} ${lastName} (${finalDept} - ${semester} - ${role})`;
 
                 const formData = new FormData(recruitmentForm);
 
                 // Add useful recruitment metadata
                 formData.set('usn', usn);
+                formData.set('department', finalDept);
+                formData.set('semester', semester);
+                if (department === 'Others') {
+                    formData.set('specified_department', otherDepartment);
+                }
                 formData.append('college', 'East Point College of Engineering and Technology');
-                formData.append('department', 'Department of IoT and Cybersecurity');
                 formData.append('submission_time', new Date().toISOString());
 
                 try {
@@ -1568,6 +1714,10 @@ void main(){
                         // Fill summary card
                         document.getElementById('summary-name').textContent = `${firstName} ${lastName}`;
                         document.getElementById('summary-usn').textContent = usn;
+                        const summaryDept = document.getElementById('summary-dept');
+                        const summarySem = document.getElementById('summary-sem');
+                        if (summaryDept) summaryDept.textContent = finalDept;
+                        if (summarySem) summarySem.textContent = semester;
                         document.getElementById('summary-role').textContent = role;
 
                         // Scroll success panel into center view
@@ -1590,6 +1740,7 @@ void main(){
         function resetApplicationForm() {
             if (recruitmentForm && successPanel) {
                 recruitmentForm.reset();
+                if (otherDeptContainer) otherDeptContainer.classList.add('hidden');
                 successPanel.classList.add('hidden');
                 successPanel.classList.remove('flex');
                 recruitmentForm.classList.remove('hidden');
