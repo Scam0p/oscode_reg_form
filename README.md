@@ -1,42 +1,44 @@
-# POWERHOUSE × OS CODE | Core Team Recruitment
+# Powerhouse Foundation — Casino Royale Event Registration Platform
 
-Recruitment & Selection portal for the **OS Code Core Team** at **East Point College of Engineering and Technology** (Department of IoT & Cybersecurity), presented in collaboration with **POWERHOUSE Tech**.
-
-- **Agency Website**: [https://powerhouse-tech.site/](https://powerhouse-tech.site/)
-- **Live Recruitment Portal**: Powered by Cloudflare Pages & Web3Forms
+Production-ready event registration platform for **Powerhouse Foundation** under the **Casino Royale** creative direction: restrained, cinematic, sophisticated, and engineered with Apple-level interface discipline.
 
 ---
 
-## ⚡ Available Core Team Domains
-- **Technical & Dev Team**: Full-stack web development, AI integration, infrastructure, and technical workshop execution.
-- **Social Media & Content Creation**: Visual design, video editing, social media management, brand storytelling.
-- **Marketing & Outreach**: Campus PR, cross-college partnerships, sponsorship outreach, and event marketing.
-- **Event Management & Operations**: Hackathon coordination, logistics, tech symposiums, speaker hosting.
+## ♠ Event Architecture
+
+- **Public Event Experience**: Cinematic hero, event details, team formation guide, candidate roster, and organizer identity.
+- **5-Step Team Registration Journey**:
+  1. **Team Leader Verification**: Live USN uppercase normalization with instant eligibility validation against the official directory.
+  2. **Team Identity**: Unique team naming and heraldic accent colour assignment.
+  3. **Participant Selection**: Real-time searchable directory of eligible candidates with stable deterministic gradient avatars, live selection counters, and team-coloured allocated states.
+  4. **Review & Confirmation**: Transactional summary and conflict detection.
+  5. **Visual Digital Team Pass**: Casino Royale invitation-style confirmation pass featuring interactive ReflectiveCard metallic sheen, printable on A4.
+- **Organizer Admin Portal**: Authenticated dashboard with real-time team management, allocation oversight, manual attendance tracking, and CSV reporting.
 
 ---
 
-## 🛠️ Tech Stack & Architecture
-- **Markup & Layout**: Semantic HTML5 with accessibility best practices.
-- **Styling**: Tailwind CSS v4 design system with custom brand tokens, dark mode `#050505`, custom noise textures, and Anton/Inter typography.
-- **Form Handling**: Direct asynchronous form dispatch via Web3Forms API with Cloudflare Pages Functions proxy support (`/api/recruitment`).
-- **Icons**: Iconify Lucide & MDI collections.
+## 🛠️ Tech Stack & Design System
+
+- **Design Language**: Apple-inspired clean UI, restrained typography, dark luxury aesthetic, Royal Blue (`#1D4ED8`), Cherry Red (`#C41E3A`), Soft Ivory (`#F8F6F0`), and Midnight Navy (`#080C14`).
+- **Typography**: Anton, Playfair Display, Instrument Serif, and Inter with tabular numerals.
+- **Styling**: Tailwind CSS v4 design token layer with print media stylesheets.
+- **Data Source**: 60-student directory loaded from `filled_student_names.csv`, handling missing entries gracefully.
 
 ---
 
-## 🚀 Development & Build
+## 🚀 Build & Development
 
-### Install Dependencies
-```bash
-npm install
-```
-
-### Build CSS & Production Dist
+### 1. Build CSS & Assemble Dist
 ```bash
 npm run build
 ```
-This runs Tailwind CSS compilation (`tailwindcss -i src/input.css -o src/style.css --minify`) and executes `build.js` to assemble static assets with environment injection into `dist/`.
+
+### 2. Development Mode (Tailwind Watcher)
+```bash
+npm run dev
+```
 
 ---
 
-## 📄 License
-© 2026 POWERHOUSE × OS CODE. All rights reserved.
+## 📄 License & Organization
+© 2026 Powerhouse Foundation. All rights reserved.

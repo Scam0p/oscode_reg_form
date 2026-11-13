@@ -1,24 +1,20 @@
 {
-  "name": "oscode_reg_form",
-  "version": "1.0.0",
-  "description": "POWERHOUSE × OS CODE Core Team Recruitment portal",
+  "name": "powerhouse-casino-royale",
+  "version": "2.0.0",
+  "description": "Powerhouse Foundation — Casino Royale Event Registration Platform",
   "main": "build.js",
   "scripts": {
     "dev": "tailwindcss -i src/input.css -o src/style.css --watch",
     "css:build": "tailwindcss -i src/input.css -o src/style.css --minify",
     "build": "npm run css:build && node build.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Scam0p/oscode_reg_form.git"
-  },
   "keywords": [
     "powerhouse",
-    "os-code",
-    "recruitment",
-    "registration"
+    "powerhouse-foundation",
+    "casino-royale",
+    "event-registration"
   ],
-  "author": "POWERHOUSE Tech",
+  "author": "Powerhouse Foundation",
   "license": "ISC",
   "dependencies": {
     "@tailwindcss/cli": "^4.3.2",

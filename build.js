@@ -17,7 +17,7 @@ if (fs.existsSync(envPath)) {
     });
 }
 
-// 2. Ensure dist directory exists
+// 2. Clean & recreate dist directory
 const distDir = path.join(__dirname, 'dist');
 if (fs.existsSync(distDir)) {
     fs.rmSync(distDir, { recursive: true, force: true });
@@ -26,7 +26,7 @@ fs.mkdirSync(distDir);
 
 const srcDir = path.join(__dirname, 'src');
 
-// 3. Define recursive copy with env variable injection for HTML files
+// 3. Define recursive copy with cache-busting injection for HTML files
 function copyRecursiveSync(src, dest) {
     const exists = fs.existsSync(src);
     const stats = exists && fs.statSync(src);
@@ -44,11 +44,8 @@ function copyRecursiveSync(src, dest) {
     } else {
         if (src.endsWith('.html')) {
             let html = fs.readFileSync(src, 'utf8');
-            const web3FormsAccessKey = process.env.WEB3FORMS_ACCESS_KEY || 'cd2f1229-315e-425a-b75e-935bdc31ae59';
             const buildVersion = Date.now();
-            let updatedHtml = html
-                .split('{{WEB3FORMS_ACCESS_KEY}}').join(web3FormsAccessKey)
-                .split('style.css').join(`style.css?v=${buildVersion}`);
+            let updatedHtml = html.split('style.css').join(`style.css?v=${buildVersion}`);
             fs.writeFileSync(dest, updatedHtml, 'utf8');
         } else {
             fs.copyFileSync(src, dest);
@@ -58,13 +55,4 @@ function copyRecursiveSync(src, dest) {
 
 copyRecursiveSync(srcDir, distDir);
 
-// 4. Also provide /os-code/ alias in dist for bookmark compatibility
-const osCodeDistDir = path.join(distDir, 'os-code');
-if (!fs.existsSync(osCodeDistDir)) {
-    fs.mkdirSync(osCodeDistDir, { recursive: true });
-}
-if (fs.existsSync(path.join(distDir, 'index.html'))) {
-    fs.copyFileSync(path.join(distDir, 'index.html'), path.join(osCodeDistDir, 'index.html'));
-}
-
-console.log('Build successful! All assets and injected HTML files copied to dist/ directory.');
+console.log('Build successful! All Powerhouse Foundation assets compiled to dist/ directory.');
